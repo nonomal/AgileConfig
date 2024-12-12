@@ -1,5 +1,153 @@
 # Change log
 ------------------------------
+[1.9.8]
+* Correct naming
+* Refactor some logic
+* Upgrade MonogoDb driver to 3.0
+
+[1.9.7]
+* Refactor event bus
+
+[1.9.6]
+* Support OTLP headers
+
+[1.9.5]
+* Fix some small issue
+
+[1.9.4]
+* Support opentelemetry logs, traces, metrics
+
+[1.9.3]
+* Refactoring the TinyEventbus
+
+[1.9.2]
+* 修复无法后台校验 node 存活的问题
+
+[1.9.0]
+* mongodb supported
+  
+[1.8.1]
+* Use build-in HttpClient instead of AgileHttp client.
+
+[1.8.0]
+* 升级到 .NET8
+
+[1.7.2]
+* 修复 appid 为中文时无法获取配置的问题
+
+[1.7.1]
+* 修复在严格区分大小写的 SQLServer 上建表失败的问题
+
+[1.7.0]
+* 支持 SSO 登录   
+
+[1.6.20]
+* 优化MD5性能   
+  https://github.com/dotnetcore/AgileConfig/pull/140
+
+[1.6.19]
+* 调试模式的时候优先读取项目文件夹下的wwwroot/ui文件夹里的内容   
+  https://github.com/dotnetcore/AgileConfig/pull/139
+
+[1.6.18]
+* 客户端计算配置的MD5时，OrderBy更改为 StringComparer.Ordinal 实现，避免服务端和客户端区域文化不一致导致的频繁reload问题。
+https://github.com/dotnetcore/AgileConfig/pull/132
+
+[1.6.16]
+* 支持选择部分项目发布   
+https://github.com/dotnetcore/AgileConfig/issues/128
+
+[1.6.15]
+* switch mysql driver to mysqlconnector
+
+[1.6.14]
+* 当同步环境配置的时候同步更新描述；
+
+[1.6.13]
+修复 json 编辑的时候 key 值修改大小写会多生产一个 key 的问题
+
+[1.6.12]
+* json 视图与 kv 视图编辑的时候支持补丁模式（后台与提交过来的json进行对比，只对修改跟新增做出响应，忽略删除 [112](https://github.com/dotnetcore/AgileConfig/pull/112)
+
+[1.6.11]
+* 客户端列表支持显示最新刷新时间，需要 client 1.6.10 版本支持 [108](https://github.com/dotnetcore/AgileConfig/pull/108)
+
+[1.6.10]
+* 模态框加上 maskCloseable:false 防止误操作关闭    
+
+[1.6.9] - 2022.09.27
+* 修复前端切换页面的时候偶尔卡在 loading 的问题
+
+[1.6.8.1] - 2022.08.21
+* 优化 jwt 安全问题
+
+[1.6.7] - 2022.07.20
+* 修复 react ui 不兼容 pathbase 的问题
+
+[1.6.6] - 2022.07.11
+* add monaco font content-type   
+
+[1.6.5] - 2022.05.29
+* 使用支持在集群模式下自动注册本地的ip跟端口到数据库    
+
+[1.6.4] - 2022.05.24
+* 修复日志表在某些 mysql8 数据库上新增失败的问题   
+
+[1.6.3.3] - 2022.05.13   
+* 精简一些日志  
+
+[1.6.3.2] - 2022.04.22   
+* 修复程序做为服务运行的时候读取根目录错误的问题   
+
+[1.6.3] - 2022.04.17   
+* 修复当服务的 metaData 信息未空的时候获取服务列表报错的问题
+
+[1.6.2] - 2022.04.11   
+* 使用浏览器缓存优化UI静态文件的加载速度
+
+[1.6.0] - 2022.04.05   
+* 上线服务注册发现模块
+
+[1.5.7.9] - 2022.03.14   
+* 修复自动建表的时候 mysql 数据库无法精确探测表是否已经存在的问题
+
+[1.5.7.8] - 2022.02.10   
+* 使用反向代理的时候支持 pathBase 的配置 
+
+[1.5.7.7] - 2022.01.04    
+* 修复导入配置的时候如果0个配置后台直接报500错误的问题
+* db provider 的判断忽略大小写   
+
+[1.5.7.5] - 2021.12.31    
+* 修复 json 编辑器不能在内网使用的问题
+
+[1.5.7.4] - 2021.12.23    
+* 修复 Oracle 建表可能出现的字符串超长问题
+
+[1.5.7.3] - 2021.12.21    
+* 优化缓存的使用
+
+[1.5.7.2] - 2021.12.16    
+* 支持在配置文件里定义监听
+
+[1.5.7] - 2021.12.10    
+* 应用支持分组
+
+[1.5.6] - 2021.12.06    
+* 添加最近访问功能
+
+[1.5.5] - 2021.11.23    
+* 新增 text 视图编辑模式   
+
+[1.5.4] - 2021.11.22    
+* 新增 json 视图编辑模式   
+
+[1.5.3.2] - 2021.11.18    
+* 支持在配置文件直接初始化节点列表
+
+[1.5.3.1] - 2021.11.17    
+* 修复首页配置项数量统计错误的问题  
+
 [1.5.3] - 2021.11.09    
 * 升级到.NET6  
 
